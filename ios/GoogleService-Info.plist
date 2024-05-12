@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyCpZFPIIqEJGeDmmbgk6gspmOd12_ca7_Y</string>
+	<string>AIzaSyAfwBbEkLpBlZTYeQxu_ewJzBu5u28ifWk</string>
 	<key>GCM_SENDER_ID</key>
-	<string>190044924139</string>
+	<string>110606658147</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.fastfood.vendor</string>
 	<key>PROJECT_ID</key>
-	<string>fastfood-cbebf</string>
+	<string>fastfood-76dc2</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fastfood-cbebf.appspot.com</string>
+	<string>fastfood-76dc2.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:190044924139:ios:6820a23e4512d77128b6ae</string>
+	<string>1:110606658147:ios:2f6101758cdf0bb0f8e656</string>
 </dict>
 </plist>
