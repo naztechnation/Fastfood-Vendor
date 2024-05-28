@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:geolocator/geolocator.dart';
 import 'package:sixam_mart_store/features/language/controllers/language_controller.dart';
 import 'package:sixam_mart_store/common/controllers/theme_controller.dart';
 import 'package:sixam_mart_store/features/notification/domain/models/notification_body_model.dart';
@@ -48,8 +49,35 @@ class MyApp extends StatelessWidget {
   final NotificationBody? body;
   const MyApp({super.key, required this.languages, required this.body});
 
+
+   Future<void> _requestLocation() async {
+    bool serviceEnabled;
+    LocationPermission permission;
+
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      // If not enabled, prompt user to enable it
+      serviceEnabled = await Geolocator.openLocationSettings();
+      if (!serviceEnabled) {
+        return; // User canceled or could not enable location services
+      }
+    }
+
+    // Check if location permission is granted
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      // If permission is denied, request it from the user
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        return;
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+
+    _requestLocation();
     return GetBuilder<ThemeController>(builder: (themeController) {
       return GetBuilder<LocalizationController>(builder: (localizeController) {
         return GetMaterialApp(

@@ -1,7 +1,7 @@
 name: sixam_mart_store
 description: An application for multivendor ecommerce restaurant.
 publish_to: 'none'
-version: 1.0.0+1
+version: 1.0.0+2
 
 environment:
   sdk: '>=3.2.0 <4.0.0'
@@ -16,8 +16,8 @@ dependencies:
   get: ^4.6.6
   shared_preferences: ^2.0.6
   connectivity_plus: ^5.0.2
-  firebase_core: ^2.27.1
-  firebase_messaging: ^14.7.20
+  firebase_core: ^2.31.0
+  firebase_messaging: ^14.9.2
   flutter_local_notifications: ^16.3.2
   path_provider: ^2.0.2
   url_strategy: ^0.2.0

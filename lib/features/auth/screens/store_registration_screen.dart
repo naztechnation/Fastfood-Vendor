@@ -54,6 +54,8 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> {
   String? _countryDialCode;
   bool firstTime = true;
 
+  
+
   @override
   void initState() {
     super.initState();
@@ -343,6 +345,19 @@ class _StoreRegistrationScreenState extends State<StoreRegistrationScreen> {
                           inputType: TextInputType.phone,
                           isPhone: true,
                           showTitle: false,
+                           onChanged: (text) {
+              if (text.isNotEmpty && text[0] == '0') {
+                _phoneController.value =
+                    _phoneController.value.copyWith(
+                  text: text.substring(1),  
+                  selection: TextSelection(
+                    baseOffset: text.length - 1,
+                    extentOffset: text.length - 1,
+                  ),
+                  composing: TextRange.empty,
+                );
+              }
+            },
                           onCountryChanged: (CountryCode countryCode) {
                             _countryDialCode = countryCode.dialCode;
                           },

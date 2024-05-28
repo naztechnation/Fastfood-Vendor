@@ -171,21 +171,21 @@ class _SignInScreenState extends State<SignInScreen> {
                   ) : const Center(child: CircularProgressIndicator()),
                   SizedBox(height: Get.find<SplashController>().configModel != null && Get.find<SplashController>().configModel!.toggleStoreRegistration! ? Dimensions.paddingSizeSmall : 0),
 
-                  Get.find<SplashController>().configModel != null && Get.find<SplashController>().configModel!.toggleStoreRegistration! ? TextButton(
-                    style: TextButton.styleFrom(
-                      minimumSize: const Size(1, 40),
-                    ),
-                    onPressed: () async {
-                      Get.toNamed(RouteHelper.getRestaurantRegistrationRoute());
-                    },
-                    child: RichText(text: TextSpan(children: [
-                      TextSpan(text: '${'join_as'.tr} ', style: robotoRegular.copyWith(color: Theme.of(context).disabledColor)),
-                      TextSpan(
-                        text: 'store'.tr,
-                        style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color),
-                      ),
-                    ])),
-                  ) : const SizedBox(),
+                  // Get.find<SplashController>().configModel != null && Get.find<SplashController>().configModel!.toggleStoreRegistration! ? TextButton(
+                  //   style: TextButton.styleFrom(
+                  //     minimumSize: const Size(1, 40),
+                  //   ),
+                  //   onPressed: () async {
+                  //     Get.toNamed(RouteHelper.getRestaurantRegistrationRoute());
+                  //   },
+                  //   child: RichText(text: TextSpan(children: [
+                  //     TextSpan(text: '${'join_as'.tr} ', style: robotoRegular.copyWith(color: Theme.of(context).disabledColor)),
+                  //     TextSpan(
+                  //       text: 'store'.tr,
+                  //       style: robotoMedium.copyWith(color: Theme.of(context).textTheme.bodyLarge!.color),
+                  //     ),
+                  //   ])),
+                  // ) : const SizedBox(),
 
                 ]);
               }),
