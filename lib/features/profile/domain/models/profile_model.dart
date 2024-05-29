@@ -388,8 +388,8 @@ class EmployeeInfo {
   String? phone;
   String? email;
   String? image;
-  int? employeeRoleId;
-  int? storeId;
+  var employeeRoleId;
+  var storeId;
 
   EmployeeInfo({
     this.id,
